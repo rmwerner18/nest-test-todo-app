@@ -11,11 +11,11 @@ export class TodosService {
     @InjectRepository(Todo) private readonly TodoRepository: Repository<Todo>
   ) {}
   create(createTodoDto: CreateTodoDto) {
-    return 'This action adds a new todo';
+    return this.TodoRepository.save(createTodoDto);
   }
 
   findAll() {
-    return `This action returns all todos`;
+    return this.TodoRepository.find();
   }
 
   findOne(id: number) {
@@ -23,7 +23,7 @@ export class TodosService {
   }
 
   update(id: number, updateTodoDto: UpdateTodoDto) {
-    return `This action updates a #${id} todo`;
+    return this.TodoRepository.update(id, updateTodoDto);
   }
 
   remove(id: number) {

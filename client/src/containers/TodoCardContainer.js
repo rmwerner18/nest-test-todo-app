@@ -16,7 +16,7 @@ const TodoCardContainer = () => {
  }, [])
 
  const displayTodos = () => {
-  return todos.map(todo => <TodoCard title={todo.title} body={todo.body} done={todo.done} key={todo.id}/>)
+  return todos.map(todo => <TodoCard title={todo.title} body={todo.body} done={todo.done} id={todo.id} key={todo.id}/>)
  }
 
  return (
