@@ -1,0 +1,16 @@
+body {
+  background-color: #a5a5a5;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+* {
+  border: border-box;
+}
+
+
